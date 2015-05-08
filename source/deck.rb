@@ -1,19 +1,21 @@
-require_relative 'cardloader.rb'
+
 
 class Deck
-include Cardloader
 attr_reader :cards
-  def initialize (cards)
+
+
+  def initialize(cards)
     @cards = cards || []
   end
 
-  def shuffle
-    # cards.shuffle
+  def get_card
+    cards.shuffle.pop
   end
 
-  def get_card
-    cards.pop
-  end
 end
 
-p  Deck.new(Cardloader.load('flashcard_samples.txt'))
+
+# controller
+# Controller.new(Deck.new(CardLoader.load('flashcard_samples.txt')))
+
+

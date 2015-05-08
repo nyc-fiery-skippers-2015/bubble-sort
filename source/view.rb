@@ -1,16 +1,9 @@
 
 class View
-
 def self.input
   gets.chomp
 end
-
-def self.display
-
+def self.display(input)
+  puts input
 end
-
-def print_report
-
-end
-
 end
