@@ -3,7 +3,7 @@ class Report
   attr_reader :score, :correct_cards, :incorrect_cards
   def initialize (name)
     @name = name
-    @score = args[:score, 0]
+
     @correct_cards = []
     @incorrect_cards = {}
   end

@@ -6,12 +6,13 @@ require_relative 'view.rb'
 
 
 class Controller
-  attr_reader:flash_deck :new_report
-  def initialize (file)
+  attr_reader:flash_deck, :new_report
+  def initialize(file)
     @name = file
     @flash_deck = Deck.new(Cardloader.load(file))
     @new_report = Report.new(@name)
     run
+
   end
 
  def card_check( input,answer)
@@ -24,6 +25,7 @@ class Controller
     else
       new_report.correct_cards(card_def,counter)
     end
+  end
 
   def run
   return View.display (new_report)  if flash_deck.cards.empty?
@@ -32,12 +34,12 @@ class Controller
   View.display(current_card.definition)
   user_input = View.input
   counter = 0
-  checks = card_check (user_input,current_card.answer)
+  checks = card_check(user_input, current_card.answer)
   until checks || counter == 3
     counter +=1
     View.display(current_card.definition)
     user_input = View.input
-    checks = card_check (user_input,current_card.answer)
+    checks = card_check(user_input,current_card.answer)
   end
   report_update(current_card.definition,counter)
   run
@@ -46,5 +48,6 @@ class Controller
 end
 
 if ARGV.any?
-  new_game = Controller.new( ARGV[0])
+  new_game = Controller.new(ARGV[0])
+
 end

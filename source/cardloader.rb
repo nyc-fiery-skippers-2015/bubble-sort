@@ -13,7 +13,7 @@ sub_arrays = array.each_slice(2).to_a
 
   id = 1
     sub_arrays.map do |card|
-      Cards.new(:definition => card[0], :answer => card[1], :id => id)
+      Card.new(:definition => card[0], :answer => card[1], :id => id)
       id +=1
     end
   end
