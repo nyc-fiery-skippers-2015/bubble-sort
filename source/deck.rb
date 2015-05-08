@@ -1,6 +1,8 @@
-class Deck
 
+
+class Deck
 attr_reader :cards
+
 
   def initialize(cards)
     @cards = cards || []
@@ -15,4 +17,5 @@ end
 
 # controller
 # Controller.new(Deck.new(CardLoader.load('flashcard_samples.txt')))
+
 
