@@ -6,5 +6,5 @@ def initialize ()
   @definition
   @answer
 
-
+end
 end
