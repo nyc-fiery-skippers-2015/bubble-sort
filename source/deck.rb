@@ -1,19 +1,18 @@
 class Deck
 
 attr_reader :cards
-  def initialize (card)
-   @cards = card || []
 
+  def initialize(cards)
+    @cards = cards || []
   end
 
-  def shuffle
-    cards.shuffle
+  def get_card
+    cards.shuffle.pop
   end
 
- def get_card
-    cards.pop
 end
 
-def
 
-end
+# controller
+# Controller.new(Deck.new(CardLoader.load('flashcard_samples.txt')))
+
