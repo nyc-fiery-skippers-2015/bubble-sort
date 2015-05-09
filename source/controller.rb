@@ -14,8 +14,8 @@ class Controller
     run
   end
 
-def card_check(input, answer)
-  input.downcase == answer.downcase
+def card_check(guess, answer)
+  guess.downcase == answer.downcase
 end
 
 def report_update(card_def, counter)
@@ -28,28 +28,30 @@ end
 
 def run
 
-    return View.display (new_report)  if flash_deck.cards.empty?
+    # return View.display (new_report)  if flash_deck.cards.empty?
     View.display("Welcome to the flash card game, what subject would you like to play?")
     current_card = flash_deck.get_card
-    View.display(current_card[:definition]) #cards set up as hash
+    View.display(current_card.definition)
     View.display("What is the Answer?")
     user_input = View.input
-    binding.pry
-    counter = 0
-    checks = card_check(user_input, current_card[:answer])
-    until checks || counter == 3
-      counter +=1
-      View.display(current_card[:definition])
-      user_input = View.input
-      checks = card_check(user_input,current_card[:answer])
-    end
-  report_update(current_card[:definition], counter)
-  run
+    # counter = 0
+    # checks = card_check(user_input, current_card.answer)
+    # until checks || counter == 3
+    #   counter +=1
+    #   View.display(current_card.definition)
+    #   user_input = View.input
+    #   checks = card_check(user_input,current_card.answer)
+    # end
+  # report_update(current_card.definition, counter)
+  # run
   end
 
 end
 
-if ARGV.any?
-  new_game = Controller.new(ARGV[0])
+x = Controller.new('flashcard_samples.txt')
+x.run
 
-end
+# if ARGV.any?
+#   new_game = Controller.new(ARGV[0])
+
+# end

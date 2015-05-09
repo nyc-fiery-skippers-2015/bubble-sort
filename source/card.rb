@@ -1,5 +1,5 @@
 require 'pry'
-require_relative 'deck.rb'
+# require_relative 'deck.rb'
 
 class Card
 
