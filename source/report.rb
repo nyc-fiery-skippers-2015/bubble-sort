@@ -5,7 +5,7 @@ class Report
     @name = name
 
     @correct_cards = []
-    @incorrect_cards = {}
+    @incorrect_cards = []
   end
 
 

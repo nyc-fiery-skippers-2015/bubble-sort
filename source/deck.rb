@@ -9,7 +9,7 @@ attr_reader :cards
   end
 
   def get_card
-    cards.pop
+    cards.shuffle.pop
   end
 
 end

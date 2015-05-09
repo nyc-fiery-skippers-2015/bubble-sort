@@ -1,5 +1,5 @@
 require 'csv'
-require_relative 'card.rb'
+# require_relative 'card.rb'
 
 module Cardloader
   attr_accessor :card, :deck
