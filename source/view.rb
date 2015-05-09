@@ -1,9 +1,11 @@
 
 class View
-def self.input
-  gets.chomp
+  def self.input
+    gets.chomp
+  end
+
+  def self.display(input)
+    puts input
+  end
 end
-def self.display(input)
-  puts input
-end
-end
+

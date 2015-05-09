@@ -1,6 +1,6 @@
 module GameUpdates
 
- def card_check( input,answer)
+ def card_check(input, answer)
     input.downcase == answer.downcase
   end
 
