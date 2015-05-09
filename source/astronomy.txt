@@ -1,0 +1,59 @@
+A pulsating variable star. This type of star undergoes a rhythmic pulsation as indicated by its regular pattern of changing brightness as a function of time.
+Cepheid
+
+A spherical cloud of material surrounding the head of a comet.
+coma
+
+A chunk of frozen gasses, ice, and rocky debris that orbits the Sun.
+comet
+
+A type of nebula that shines by emitting light when electrons recombine with protons to form hydrogen atoms.
+emission nebula
+
+A process where nuclei collide so fast they stick together and emit a great deal of energy.
+fusion
+
+A system of about 100 billion stars.
+galaxy
+
+A region of hot gas surrounding a young star or stars that is mostly ionized.
+H II region
+
+The second lightest and second most abundant element.
+helium
+
+The lightest and most abundant element.
+hydrogen
+
+Light that is so red humans cannot see it. A band of the electromagnetic spectrum between the visible and the microwave.
+infrared
+
+A small particle that has no charge and is thought to have very little mass.
+neutrino
+
+The imploded core of a massive star produced by a supernova explosion.
+neutron star
+
+A spherical ball of rock and/or gas that orbits a star.
+planet
+
+A type of nebula that shines by reflected light.
+reflection nebula
+
+The wind from the Sun.
+solar wind
+
+A ball of mostly hydrogen and helium gas that shines extremely brightly.
+star
+
+The death explosion of a massive star, resulting in a sharp increase in brightness followed by a gradual fading.
+supernova
+
+Light that is so blue humans cannot see it. A band of the electromagnetic spectrum between the visible and the X-ray.
+ultraviolet
+
+A star that is the remnant core of a star that has completed fusion in its core.
+white dwarf
+
+Light that is so blue humans cannot see it. A band of the spectrum between the ultraviolet and the gamma-ray.
+X-ray
