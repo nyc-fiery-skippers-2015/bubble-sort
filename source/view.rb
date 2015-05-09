@@ -1,4 +1,3 @@
-
 class View
   def self.input
     gets.chomp
@@ -8,4 +7,3 @@ class View
     puts input
   end
 end
-

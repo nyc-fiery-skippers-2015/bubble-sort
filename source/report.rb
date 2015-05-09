@@ -1,29 +1,28 @@
 class Report
 
-  attr_reader :score, :correct_cards, :incorrect_cards
-  def initialize (name)
-    @name = name
-
-    @correct_cards = []
-    @incorrect_cards = []
+  attr_accessor :correct_cards_array, :incorrect_cards_array
+  def initialize
+    #@name = name
+    @correct_cards_array = []
+    @incorrect_cards_array = []
   end
 
 
-  def correct_cards(card,count)
-    correct_cards << [card,count]
+  def correct_cards(card, count)
+    correct_cards_array << [card, count]
   end
 
-  def incorrect_cards (card,count)
-    incorrect_cards << [:card => count]
+  def incorrect_cards(card, count)
+    incorrect_cards_array.push( [:card => count])
   end
 
 
   def correct_percentage
-    correct = correct_cards.length / (correct_cards.length + incorrect_cards.length) * 100
+    correct = correct_cards_array.length / (correct_cards_array.length + incorrect_cards_array.length) * 100
   end
 
   def incorrect_percentage
-    incorrect = incorrect_cards.length / (correct_cards.length + incorrect_cards.length) * 100
+    incorrect = incorrect_cards_array.length / (correct_cards_array.length + incorrect_cards_array.length) * 100
   end
 
   def to_s

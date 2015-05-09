@@ -1,5 +1,3 @@
-
-
 class Deck
 attr_reader :cards
 
@@ -10,12 +8,8 @@ attr_reader :cards
 
   def get_card
     cards.shuffle.pop
+
   end
 
 end
-
-
-# controller
-# Controller.new(Deck.new(CardLoader.load('flashcard_samples.txt')))
-
 
