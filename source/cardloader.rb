@@ -11,15 +11,13 @@ module Cardloader
     end
 
     sub_arrays = array.each_slice(3).to_a
-    sub_arrays.each_with_index do |card, id|
-      card.delete("")
-      card << id.to_s
+    sub_arrays.map.with_index do |x, id|
+      x.delete("")
+      x << id.to_s
+      Card.new({:definition =>x[0], :answer =>x[1], :id =>id})
     end
 
-    headers = [:definition, :answer, :id]
-      sub_arrays.map do |x|
-      Hash[headers.zip(x)]
-    end
+
   end
 end
 
