@@ -1,4 +1,5 @@
 require 'csv'
+require_relative 'card'
 # require_relative 'card.rb'
 
 module Cardloader
@@ -14,7 +15,7 @@ module Cardloader
     sub_arrays.map.with_index do |x, id|
       x.delete("")
       x << id.to_s
-      Card.new({:definition =>x[0], :answer =>x[1], :id =>id})
+      Card.new({:definition =>x[0], :answer =>x[1], :id =>x[2]})
     end
 
 

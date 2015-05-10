@@ -4,7 +4,6 @@ require_relative 'report.rb'
 require_relative 'view.rb'
 
 
-require 'pry'
 class Controller
   attr_reader:flash_deck, :new_report
   def initialize(file)
@@ -26,30 +25,27 @@ def report_update(card_def, counter)
   end
 end
 
+
 def run
 
     return View.display (new_report)  if flash_deck.cards.empty?
-    View.display("Welcome to the flash card game, what subject would you like to play?")
     current_card = flash_deck.get_card
-    View.display(current_card[:definition]) #cards set up as hash
-    View.display("What is the Answer?")
-    user_input = View.input
-    binding.pry
     counter = 0
-    checks = card_check(user_input, current_card[:answer])
+    checks = false
     until checks || counter == 3
       counter +=1
-      View.display(current_card[:definition])
+      View.display(current_card.definition)
       user_input = View.input
-      checks = card_check(user_input,current_card[:answer])
+      checks = card_check(user_input,current_card.answer)
+       puts "Wrong " if checks == false
+       puts "Right!" if checks
     end
-  report_update(current_card[:definition], counter)
+   # report_update(current_card,counter)
   run
   end
 
 end
 
-if ARGV.any?
-  new_game = Controller.new(ARGV[0])
+ View.display("Welcome to the flash card game")
+  new_game = Controller.new('flashcard_samples.txt')
 
-end

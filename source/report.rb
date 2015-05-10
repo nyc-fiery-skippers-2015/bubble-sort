@@ -14,7 +14,7 @@ class Report
   end
 
   def incorrect_cards (card,count)
-    incorrect_cards << [:card => count]
+    incorrect_cards << [card,count]
   end
 
 
